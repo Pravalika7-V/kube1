@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-kube1-deployment
+  name: my-kube3-deployment
   labels:
     app: my-kube-app1
 spec:
@@ -15,10 +15,10 @@ spec:
         app: my-kube-app1
     spec:
       containers:
-        - name: my-kube1-container
-          image: shiv4j/my-kube1:latest  # Your Docker image
+        - name: my-kube3-container
+          image: docker.io/pravalika7/my-kube3-chinna:latest  # Updated Docker image
           ports:
-            - containerPort: 3001  # The port where the Node.js app is listening
+            - containerPort: 3000  # Ensure this matches your app's port
           resources:
             limits:
               memory: "512Mi"
